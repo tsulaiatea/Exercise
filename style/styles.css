@@ -27,6 +27,22 @@ header{
 a{
     text-decoration: none;
 }
+a{
+    position: relative;
+}
+a::after{
+    content: ' ';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: -2px;   /* რომ ხაზის ქვეშ გამოჩნდეს */
+    left: 0;
+    background-color: brown;
+    display: block;
+}
+a:hover::after{
+    width: 100%;
+}
 .bar{
     font-size: 20px;
     
